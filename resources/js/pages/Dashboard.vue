@@ -4,9 +4,7 @@ import PlaceholderPattern from '@/components/PlaceholderPattern.vue';
 import { dashboard } from '@/routes';
 import AppLayout from '@/layouts/AppLayout.vue';
 
-defineOptions({
-    layout : AppLayout
-})
+
 
 defineOptions({
     layout: {
@@ -16,6 +14,7 @@ defineOptions({
                 href: dashboard(),
             },
         ],
+        component : AppLayout
     },
 });
 </script>

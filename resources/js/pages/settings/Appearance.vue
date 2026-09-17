@@ -5,9 +5,7 @@ import Heading from '@/components/Heading.vue';
 import { edit } from '@/routes/appearance';
 import AppLayout from '@/layouts/AppLayout.vue';
 import SettingsLayout from '@/layouts/settings/Layout.vue';
-defineOptions({
-    layout : [AppLayout,SettingsLayout]
-})
+
 
 defineOptions({
     layout: {
@@ -17,6 +15,7 @@ defineOptions({
                 href: edit(),
             },
         ],
+        component : [AppLayout,SettingsLayout]
     },
 });
 </script>

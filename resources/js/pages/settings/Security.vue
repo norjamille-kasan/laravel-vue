@@ -13,9 +13,7 @@ import type { Props as ManageTwoFactorProps } from '@/components/ManageTwoFactor
 import ManageTwoFactor from '@/components/ManageTwoFactor.vue';
 import AppLayout from '@/layouts/AppLayout.vue';
 import SettingsLayout from '@/layouts/settings/Layout.vue';
-defineOptions({
-    layout : [AppLayout,SettingsLayout]
-})
+
 // oxfmt-ignore
 type Props = {
     passwordRules: string;
@@ -32,6 +30,7 @@ defineOptions({
                 href: edit(),
             },
         ],
+        component: [AppLayout, SettingsLayout],
     },
 });
 </script>
