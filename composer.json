@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "norjamille-kasan/laravel-with-ai",
+    "name": "norjamille-kasan/laravel-vue",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
     "keywords": [
