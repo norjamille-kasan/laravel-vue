@@ -4,7 +4,7 @@
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
-
+@source "../node_modules/@inertiaui/modal-vue/src";
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

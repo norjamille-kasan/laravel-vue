@@ -11,7 +11,11 @@ import type { Props as ManagePasskeysProps } from '@/components/ManagePasskeys.v
 import ManagePasskeys from '@/components/ManagePasskeys.vue';
 import type { Props as ManageTwoFactorProps } from '@/components/ManageTwoFactor.vue';
 import ManageTwoFactor from '@/components/ManageTwoFactor.vue';
-
+import AppLayout from '@/layouts/AppLayout.vue';
+import SettingsLayout from '@/layouts/settings/Layout.vue';
+defineOptions({
+    layout : [AppLayout,SettingsLayout]
+})
 // oxfmt-ignore
 type Props = {
     passwordRules: string;

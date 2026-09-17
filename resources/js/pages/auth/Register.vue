@@ -9,6 +9,7 @@ import { Label } from '@/components/ui/label';
 import { Spinner } from '@/components/ui/spinner';
 import { login } from '@/routes';
 import { store } from '@/routes/register';
+import AuthLayout from '@/layouts/AuthLayout.vue';
 
 defineProps<{
     passwordRules: string;
@@ -18,6 +19,7 @@ defineOptions({
     layout: {
         title: 'Create an account',
         description: 'Enter your details below to create your account',
+         component : AuthLayout
     },
 });
 </script>
