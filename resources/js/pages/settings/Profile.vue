@@ -13,18 +13,22 @@ import { edit } from '@/routes/profile';
 import { send } from '@/routes/verification';
 import AppLayout from '@/layouts/AppLayout.vue';
 import SettingsLayout from '@/layouts/settings/Layout.vue';
+import { setLayoutProps } from '@inertiajs/vue3'
+
 
 defineOptions({
-    layout: {
-        breadcrumbs: [
-            {
-                title: 'Profile settings',
-                href: edit(),
-            },
-        ],
-        component : [AppLayout,SettingsLayout]
-    },
+    layout: [AppLayout,SettingsLayout]
 });
+
+setLayoutProps({
+    breadcrumbs: [
+        {
+            title: 'Profile settings',
+            href: edit(),
+        },
+    ],
+});
+
 
 const page = usePage();
 const user = computed(() => page.props.auth.user);

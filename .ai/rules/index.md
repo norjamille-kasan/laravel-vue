@@ -6,4 +6,5 @@ Before planning or editing, find the row whose globs match the file's path and r
 | --- | --- |
 | resources/js/** | .ai/rules/inertia-vue-patterns.md |
 | app/Http/Controllers/** | .ai/rules/laravel-controllers-patterns.md |
-| database/migrations/**, app/Models/**, app/Enums/** | .ai/rules/models-enums-patterns.md |
+| database/migrations/**, app/Models/**, app/Enums/** | .ai/rules/models-enums-patterns.md, .ai/rules/models.md |
+| database/migrations/**, app/Models/** | .ai/rules/models.md |

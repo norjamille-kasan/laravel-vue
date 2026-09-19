@@ -5,18 +5,18 @@ import Heading from '@/components/Heading.vue';
 import { edit } from '@/routes/appearance';
 import AppLayout from '@/layouts/AppLayout.vue';
 import SettingsLayout from '@/layouts/settings/Layout.vue';
-
+import { setLayoutProps } from '@inertiajs/vue3'
 
 defineOptions({
-    layout: {
-        breadcrumbs: [
-            {
-                title: 'Appearance settings',
-                href: edit(),
-            },
-        ],
-        component : [AppLayout,SettingsLayout]
-    },
+    layout: [AppLayout,SettingsLayout],
+});
+setLayoutProps({
+    breadcrumbs: [
+        {
+            title: 'Appearance settings',
+            href: edit(),
+        },
+    ],
 });
 </script>
 

@@ -13,6 +13,7 @@ import type { Props as ManageTwoFactorProps } from '@/components/ManageTwoFactor
 import ManageTwoFactor from '@/components/ManageTwoFactor.vue';
 import AppLayout from '@/layouts/AppLayout.vue';
 import SettingsLayout from '@/layouts/settings/Layout.vue';
+import { setLayoutProps } from '@inertiajs/vue3'
 
 // oxfmt-ignore
 type Props = {
@@ -23,15 +24,16 @@ type Props = {
 const props = defineProps<Props>();
 
 defineOptions({
-    layout: {
-        breadcrumbs: [
-            {
-                title: 'Security settings',
-                href: edit(),
-            },
-        ],
-        component: [AppLayout, SettingsLayout],
-    },
+    layout: [AppLayout, SettingsLayout],
+});
+
+setLayoutProps({
+    breadcrumbs: [
+        {
+            title: 'Security settings',
+            href: edit(),
+        },
+    ],
 });
 </script>
 
