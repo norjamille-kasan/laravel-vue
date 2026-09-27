@@ -1,0 +1,34 @@
+<?php
+
+use App\Models\User;
+use Illuminate\Database\Migrations\Migration;
+use Spatie\Permission\Models\Role;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        $superAdminRole = Role::create([
+            'name' => 'super-admin',
+        ]);
+
+        $superAdminAccount = User::create([
+            'name' => 'Super Admin',
+            'email' => 'super@admin.com',
+            'password' => 'password',
+        ]);
+
+        $superAdminAccount->assignRole($superAdminRole);
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        //
+    }
+};
